@@ -103,7 +103,21 @@ h3 {
 h4 {
     font-size: 30px;
 }
+h5 {
+    position: relative;
+}
 
+h5:after {
+    position: absolute;
+    background-image: url(photo/down.png);
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    right: 15px ;
+}
 
 /*СЕКЦИИЯ MAIN-INFO*/
 .dates, .introduction, .countries  {
@@ -233,6 +247,379 @@ h4 {
     left: -30px;
     top: -8px;
 }
+
+
+/*МОДАЛЬНЫЕ ОКНА*/
+#btn {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: rgb(150, 59, 59);
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    background: rgb(171, 229, 243);
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+/* "modal" — это затемненный фон */
+.modal-can {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-rus {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-ger {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-fin {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-usa {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-cze {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-swe {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-sui {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-svk {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-den {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-kaz {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-ita {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-gbr {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+.modal-blr {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;  /*Z-index - нужен для того, чтобы расположить окно над всеми элементами.*/
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* "modal-content" - область контента */
+.modal-content {
+    /* width: 100%; */
+    max-width: 500px;
+    padding: 50px;
+    background: #f9f9f9;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 5px 15px black;
+}
+
+/* этот стиль через JavaScript прописан, срабатывает при нажатии на кнопку */
+.modalStyle {
+    position: fixed;
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: .9s;
+}
+
+/* крестик закрытия окна */
+.cross {
+    background: #ff0000;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none;
+    cursor: pointer;
+    transition: .3s;
+    outline: none;
+}
+
+.cross:hover {
+    transition: .3s;
+    transform: rotate(180deg);
+}
+
+.text-modal {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+
+.modal-heading {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.gold {
+    position: relative;
+}
+.gold:before {
+    position: absolute;
+    background-image: url(photo/gold.png);
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: -25px;
+    top: 2px;
+}
+.silver {
+    position: relative;
+}
+.silver:before {
+    position: absolute;
+    background-image: url(photo/silver.png);
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: -25px;
+    top: 2px;
+}
+.bronze {
+    position: relative;
+}
+.bronze:before {
+    position: absolute;
+    background-image: url(photo/bronze.png);
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: -25px;
+    top: 1px;
+}
+
+
 
 
 @media all and (max-width: 1280px) {
