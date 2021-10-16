@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+/* ЗАГОЛОВОК ГЛАВНЫЙ*/
+.heading {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+
+    background-image: url(photo/navigation-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 50px;
+    color: rgb(56, 55, 55);
+
+    position: relative;
+}
+
+h1::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-image: url(photo/2022_IIHF_WC_Logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: -80px;
+}
+
+.headingChanged {
+    text-align: center;
+    font-size: 52px;
+    color: rgb(233, 18, 18);
+}
+
+/*КОНТЕЙНЕРЫ*/
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(photo/waves.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(240, 240, 240);
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background-image: url(photo/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 550px;
+    height: 475px;
+    padding: 10px;
+    margin: 3px;
+    margin-right: -3px;
+} 
+.countries {
+    background-color: rgb(65, 64, 64);
+    width: 330px;
+    height: 475px;
+    text-align: center;
+    margin: 3px;
+}
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 330px;
+    height: 475px;
+    margin: 3px;
+    background-color: rgb(65, 64, 64);
+}
+
+
+/*ДРУГИЕ ЗАГОЛОВКИ*/
+h3, h4, h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+
+/*СЕКЦИИЯ MAIN-INFO*/
+.dates, .introduction, .countries  {
+    border-bottom: 2px solid gray;
+    margin-left: 10px;
+}
+.hymn {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+}
+#myButton {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: -15px;
+}
+.push {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.text {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    line-height: 18px;
+    font-size:18px;
+}
+.photographer {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+/*COUNTRIES*/
+
+.flag-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flags {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 13px;
+}
+.flag-photo {
+    height: 40px;
+    width: 40px;
+}
+.flag-country {
+    font-size: 15px;
+    color: white;
+}
+
+
+
+/*САМ СЧЕТЧИК*/
+.count {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.time {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-size: 14px;
+    margin-top: 2px;
+}
+.hockey {
+    background-color: rgb(122, 122, 122);
+    margin: 2px;
+    height: 90px ;
+    width: 70px;
+}
+.days, .hours, .minutes, .seconds {
+    font-size: 25px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*ПОДВАЛ*/
+
+.socials {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-top: 1px solid gray;
+
+}
+.nets {
+    height: 40px;
+    width: 40px;
+    margin: 5px 10px 5px 10px;
+}
+
+.BBD {
+    background-color: rgb(65, 64, 64);
+    padding: 2px;
+}
+.txt {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-size: 10px;
+    margin-left: 10px;
+}
+.BBDlogo {
+    position: relative;
+    margin-left: 40px;
+}
+.BBDlogo:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(photo/BBD.ico);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: -30px;
+    top: -8px;
+}
+
+
+@media all and (max-width: 1280px) {
+.main-info {
+    width: 1000px;
+    margin-right: 0;
+    margin: 10px;
+}
+.countries {
+    margin: 10px;
+    margin-right: 50px;
+}
+.countdown-container {
+    margin: 10px;
+    margin-left: 50px;
+}
+h1::before {
+    width: 60px;
+    height: 60px;
+    left: -50px;
+}
+.headingChanged {
+    font-size: 45px;
+}
+}
+
+@media all and (max-width: 1025px) {
+.main-info {
+    width: 950px;
+    margin-right: 0;
+    margin: 10px;
+}
+.countries {
+    margin: 10px;
+    margin-right: 50px;
+}
+.countdown-container {
+    margin: 10px;
+    margin-left: 50px;
+}
+h1 {
+    font-size: 38px;
+}
+h1::before {
+    width: 60px;
+    height: 60px;
+    left: -50px;
+}
+.headingChanged {
+    font-size: 35px;
+}
+}
+
+@media all and (max-width: 800px) {
+.main-info {
+    width: 700px;
+    margin-right: 0;
+    margin: 10px;
+}
+.countries {
+    margin: 10px;
+}
+.countdown-container {
+    margin: 10px;
+}
+h1 {
+    font-size: 25px;
+}
+h1::before {
+    width: 40px;
+    height: 40px;
+    left: -50px;
+}
+.headingChanged {
+    font-size: 25px;
+}
+}
+
+@media all and (max-width: 600px) {
+.main-info {
+    width: 500px;
+    margin-right: 0;
+    margin: 10px;
+}
+.countries {
+    margin: 10px;
+}
+.countdown-container {
+    margin: 10px;
+}
+h1 {
+    font-size: 20px;
+}
+h1::before {
+    width: 30px;
+    height: 30px;
+    left: -30px;
+}
+.headingChanged {
+    font-size: 20px;
+}
+}
+
+@media all and (max-width: 480px) {
+.main-info {
+    width: 380px;
+    margin-right: 0;
+    margin: 10px;
+}
+.countries {
+    margin: 10px;
+}
+.countdown-container {
+    margin: 10px;
+}
+h1 {
+    font-size: 15px;
+}
+h1::before {
+    width: 25px;
+    height: 25px;
+    left: -20px;
+}
+.headingChanged {
+    font-size: 14px;
+}
+.photographer {
+    margin-top: 0;
+}
+}
+@media all and (max-width: 321px) {
+.main-info {
+    width: 300px;
+    margin-right: 0;
+    margin: 5px;
+}
+.countries {
+    margin: 5px;
+}
+.countdown-container {
+    margin: 5px;
+}
+h1 {
+    font-size: 13px;
+}
+h1::before {
+    width: 20px;
+    height: 20px;
+    left: -20px;
+}
+.headingChanged {
+    font-size: 13px;
+}
+.photographer {
+    margin-top: 0;
+}
+}
