@@ -1,5 +1,3 @@
-
-
 function champCountDown() {
     const champDate = new Date("May 13, 2022, 16:20"); //скорее всего по местному финскому времени
     const now = new Date();

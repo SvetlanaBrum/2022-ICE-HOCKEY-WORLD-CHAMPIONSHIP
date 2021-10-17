@@ -3,6 +3,7 @@
 }
 body {
     margin: 0;
+    
 }
 
 /* ЗАГОЛОВОК ГЛАВНЫЙ*/
@@ -250,19 +251,6 @@ h5:after {
 
 
 /*МОДАЛЬНЫЕ ОКНА*/
-#btn {
-    font-size: 25px;
-    text-transform: uppercase;
-    color: rgb(150, 59, 59);
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    padding: 15px;
-    background: rgb(171, 229, 243);
-    outline: none;
-    border-radius: 10px;
-    border: none;
-}
 
 /* "modal" — это затемненный фон */
 .modal-can {
@@ -521,6 +509,7 @@ h5:after {
 /* "modal-content" - область контента */
 .modal-content {
     /* width: 100%; */
+    font-family: 'Roboto Condensed', sans-serif;
     max-width: 500px;
     padding: 50px;
     background: #f9f9f9;
@@ -618,7 +607,6 @@ h5:after {
     left: -25px;
     top: 1px;
 }
-
 
 
 
