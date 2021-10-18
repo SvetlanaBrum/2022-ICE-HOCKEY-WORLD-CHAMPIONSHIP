@@ -58,7 +58,9 @@ h1::before {
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    min-height: 70vh;
     background-image: url(photo/waves.png);
     background-size: cover;
     background-position: center;
