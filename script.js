@@ -1,3 +1,22 @@
+$(function() {
+ let header = $('.heading');
+ let hederHeight = header.height(); // вычисляем высоту шапки
+  
+ $(window).scroll(function() {
+   if($(this).scrollTop() > 1) {
+    header.addClass('heading_fixed');
+    $('body').css({
+       'paddingTop': hederHeight+'px' // делаем отступ у body, равный высоте шапки
+    });
+   } else {
+    header.removeClass('heading_fixed');
+    $('body').css({
+     'paddingTop': 0 // удаляю отступ у body, равный высоте шапки
+    })
+   }
+ });
+});
+
 function champCountDown() {
     const champDate = new Date("May 13, 2022, 16:20"); //скорее всего по местному финскому времени
     const now = new Date();
