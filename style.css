@@ -13,7 +13,7 @@ main {
     min-height: calc(100% - 240px);  
 } 
 footer {
-    height: 120px;  
+    height: 120px;
 }
 
 
@@ -48,7 +48,7 @@ h1 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 50px;
     color: rgb(56, 55, 55);
-    padding: 15px;
+    padding: 5px;
 
 }
 .headingChanged {
@@ -63,16 +63,22 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(240, 240, 240);
-}
-.container {
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
-    
+
+
 }
+/* .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} */
 
 .main-info {
     display: flex;
