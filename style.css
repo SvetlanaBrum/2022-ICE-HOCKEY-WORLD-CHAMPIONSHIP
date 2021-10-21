@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-html, body {
+body {
     margin: 0;
     padding: 0;
     height: 100%;    
@@ -10,7 +10,7 @@ header {
     height: 120px;  
 }
 main {
-    height: calc(100% - 240px);  
+    min-height: calc(100% - 240px);  
 } 
 footer {
     height: 120px;  
@@ -29,7 +29,6 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #fff;
-    border: 1px solid red;
 
     z-index: 100;
     width: 100%;
@@ -44,7 +43,6 @@ footer {
     width: 80px;
     height: 110px;
     margin: 5px;
-    border: 1px solid red;
 }
 h1 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -52,12 +50,10 @@ h1 {
     color: rgb(56, 55, 55);
     padding: 15px;
 
-    border: 1px solid red;
 }
 .headingChanged {
     text-align: center;
     font-size: 50px;
-    color: rgb(233, 18, 18);
 }
 
 /*КОНТЕЙНЕРЫ*/
@@ -66,6 +62,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
     background-image: url(photo/waves.png);
     background-size: cover;
     background-position: center;
