@@ -63,8 +63,9 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     
+    height: calc(100% - 240px);
     background-image: url(photo/waves.png);
-    background-size: content;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(240, 240, 240);
