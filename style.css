@@ -63,7 +63,7 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     
-    height: calc(100% - 240px);
+    height: 1000px;
     background-image: url(photo/waves.png);
     background-size: cover;
     background-position: center;
