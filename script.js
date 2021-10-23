@@ -1,4 +1,5 @@
-$(function() {
+/* ФИКСИРУЮ ШАПКУ */
+$(function () {
  let header = $('.heading');
  let hederHeight = header.height(); // вычисляем высоту шапки
   
@@ -17,6 +18,7 @@ $(function() {
  });
 });
 
+/*СЧЕТЧИК*/
 function champCountDown() {
     const champDate = new Date("May 13, 2022, 16:20"); //скорее всего по местному финскому времени
     const now = new Date();
@@ -234,6 +236,12 @@ $(function () {
 $('.modal').mouseup(function (e) {
     let modalContent = $(".modal-content");
     if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
-        $(this).removeClass('modalStyle');
+        $('.modal').removeClass('modalStyle');
+}
+});
+// Закрытие модального окна при клике ESCAPE
+$(document).keydown(function (e) {
+if (e.keyCode == 27) {
+$('.modal').removeClass('modalStyle');
 }
 });

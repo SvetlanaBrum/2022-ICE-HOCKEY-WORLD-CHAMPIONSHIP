@@ -6,16 +6,6 @@ html, body {
     padding: 0;
     height: 100%;    
 }
-header {
-    height: 120px;  
-}
-main {
-    min-height: calc(100% - 240px);  
-} 
-footer {
-    height: 120px;
-}
-
 
 /* ЗАГОЛОВОК ГЛАВНЫЙ*/
 .heading {
@@ -33,53 +23,58 @@ footer {
     z-index: 100;
     width: 100%;
 }
-
 .heading_fixed {
     position: fixed;
     left: 0;
     top: 0;
 }
 .logo {
-    width: 80px;
-    height: 110px;
+    width: 70px;
+    height: 100px;
     margin: 5px;
 }
+.logo-a:focus {
+    box-shadow: 0 0 20px 0.25px rgb(176, 208, 212);
+    outline: none;
+}
+
 h1 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 50px;
     color: rgb(56, 55, 55);
     padding: 5px;
-
 }
 .headingChanged {
     text-align: center;
     font-size: 50px;
+    color: crimson;
 }
 
 /*КОНТЕЙНЕРЫ*/
+header {
+    height: 120px;  
+}
 main {
+    min-height: calc(100% - 240px);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
     background-image: url(photo/waves.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(240, 240, 240);
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-
 }
-/* .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-} */
 
+footer {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
 .main-info {
     display: flex;
     flex-direction: column;
@@ -142,6 +137,10 @@ h5:after {
     background-position: center;
     background-size: contain;
     right: 15px ;
+
+    animation: shakeY; 
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 }
 
 /*СЕКЦИИЯ MAIN-INFO*/
@@ -160,12 +159,18 @@ h5:after {
     height: 40px;
     margin-left: -15px;
 }
+#myButton:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0 0 3px 3px rgb(53, 181, 204);
+}
 .push {
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
     font-size: 18px;
     margin-top: 0px;
-    margin-left: 10px;
+    margin-left: 40px;
 }
 
 .text {
@@ -184,8 +189,8 @@ h5:after {
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
     font-size: 10px;
-    margin-left: 10px;
-    margin-top: 20px;
+    margin-left: 0px;
+    margin-top: 40px;
 }
 
 /*COUNTRIES*/
@@ -201,17 +206,57 @@ h5:after {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    margin: 13px;
+    margin: 7px;
+    position: relative;
+    z-index:2;
+    width: 50px;
+    height: 90px;
+
+    background-color:rgb(65, 64, 64);
 }
+.flags:after {
+    z-index:2;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index:1;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s;
+    opacity:0;
+    background: linear-gradient(45deg, rgb(65, 64, 64), silver,rgb(124, 186, 197), silver,  rgb(65, 64, 64));
+}
+.flags:hover:after{
+    opacity:1;
+    cursor: pointer;
+}
+.flags:focus {
+    box-shadow: 0 0 5px 5px rgb(53, 181, 204);
+    outline: none;
+}
+
 .flag-photo {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
+    z-index:3;
+}
+.flag-photo:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
 }
 .flag-country {
     font-size: 15px;
     color: white;
+    z-index:3;
 }
-
+.flag-country:hover {
+    cursor: pointer;
+    color: rgb(34, 95, 165);
+    transition: 1s;
+    font-weight: bold;
+}
 
 
 /*САМ СЧЕТЧИК*/
@@ -238,45 +283,109 @@ h5:after {
 }
 
 /*ПОДВАЛ*/
-
 .socials {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #fff;
     border-top: 1px solid gray;
-
+    height: 45px;
 }
 .nets {
-    height: 40px;
-    width: 40px;
     margin: 5px 10px 5px 10px;
 }
 
+.fb {
+    width: 40px; 
+    height: 40px;
+    background: url('photo/fb.ico') 0 0 no-repeat;
+}
+.fb:hover {
+    transition: all 1.5s;
+    width: 40px; 
+    height: 40px;
+    background: url('photo/fb_color.ico') 0 0 no-repeat;
+}
+.fb:focus {
+    box-shadow: 0 0 20px 0.25px #3b5998;
+    outline: none;
+}
+.insta {
+    width: 40px; 
+    height: 40px;
+    background: url('photo/insta.ico') 0 0 no-repeat;
+}
+.insta:hover {
+    transition: all 1.5s;
+    width: 40px; 
+    height: 40px;
+    background: url('photo/insta_color.ico') 0 0 no-repeat;
+}
+.insta:focus {
+    box-shadow: 0 0 20px 0.25px #C13584;
+    outline: none;
+}
+.yt {
+    width: 40px; 
+    height: 40px;
+    background: url('photo/youtube.ico') 0 0 no-repeat;
+}
+.yt:hover {
+    transition: all 1.5s;
+    width: 40px; 
+    height: 40px;
+    background: url('photo/yt_color.ico') 0 0 no-repeat;
+}
+.yt:focus {
+    box-shadow: 0 0 20px 0.25px  #c4302b;
+    outline: none;
+}
+
 .BBD {
+    flex-grow: 1;
     background-color: rgb(65, 64, 64);
-    padding: 2px;
+    height: 75px;
 }
 .txt {
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    font-size: 10px;
-    margin-left: 10px;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.developer {
+    display: flex;
+    justify-content: flex-start;
 }
 .BBDlogo {
-    position: relative;
-    margin-left: 40px;
+    width: 40px;
+    height: 40px;
 }
-.BBDlogo:before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-image: url(photo/BBD.ico);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    left: -30px;
-    top: -8px;
+.BBDlogo-a {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: -5px;
+}
+.BBDlogo-a:focus {
+    box-shadow: 0 0 5px 5px #bfd9d7;
+    outline: none;
+}
+.companyName {
+    text-decoration: none;
+    padding-right: 4px;
+}
+.companyName:hover, .companyName:active {
+    color: #bfd9d7;
+    transition: all 0.25s;
+}
+.companyNameLink {
+    margin-left: 10px;
+    margin-top: -2px;
+}
+.companyNameLink:focus {
+    box-shadow: 0 0 5px 5px rgb(122, 122, 122);
+    outline: none;
 }
 
 
@@ -597,7 +706,7 @@ h5:after {
 }
 .gold:before {
     position: absolute;
-    background-image: url(photo/gold.png);
+    background-image: url(photo/gold.ico);
     content: "";
     width: 20px;
     height: 20px;
@@ -612,7 +721,7 @@ h5:after {
 }
 .silver:before {
     position: absolute;
-    background-image: url(photo/silver.png);
+    background-image: url(photo/silver.ico);
     content: "";
     width: 20px;
     height: 20px;
@@ -627,7 +736,7 @@ h5:after {
 }
 .bronze:before {
     position: absolute;
-    background-image: url(photo/bronze.png);
+    background-image: url(photo/bronze.ico);
     content: "";
     width: 20px;
     height: 20px;
@@ -652,7 +761,7 @@ h5:after {
 }
 .countdown-container {
     margin: 10px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 h1 {
     font-size: 45px;
@@ -674,7 +783,7 @@ h1 {
 }
 .countdown-container {
     margin: 10px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 h1 {
     font-size: 40px;
@@ -730,18 +839,45 @@ h1 {
 .push {
     font-size: 16px;
 }
-
 .photographer {
     margin-top: 0;
 }
+
+.countdown-container {
+    height: 280px;
+    padding: 3px;
+}
+.time {
+    margin-top: 30px;
+}
 }
 
 
-@media all and (min-width: 320px) {
-    .flags {
-    margin: 10px;
+@media all and (max-width: 340px) {
+.flags {
+margin: 5px;
 }
 h5:after {
     right: 7px ;
+}
+.flags {
+    width: 45px;
+    height: 85px;
+}
+.countdown-container {
+    height: 280px;
+    padding: 3px;
+}
+.time {
+    font-size: 12px;
+    margin-top: 30px;
+}
+.hockey {
+    margin: 2px;
+    height: 80px ;
+    width: 60px;
+}
+.days, .hours, .minutes, .seconds {
+    font-size: 20px;
 }
 }
