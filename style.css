@@ -403,6 +403,7 @@ h5:after {
 .companyNameLink {
     margin-left: 10px;
     margin-top: -2px;
+    text-decoration: none;
 }
 .companyNameLink:focus {
     box-shadow: 0 0 5px 5px rgb(122, 122, 122);
