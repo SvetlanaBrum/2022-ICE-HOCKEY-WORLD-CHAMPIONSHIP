@@ -203,6 +203,7 @@ h5:after {
     color: rgb(53, 181, 204);
     font-size:22px;
     font-weight: bold;
+    margin-top: -10px;
 }
 .photographer {
     font-family: 'Roboto Condensed', sans-serif;
@@ -283,6 +284,7 @@ h5:after {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 22px;
 }
 .time {
     font-family: 'Roboto Condensed', sans-serif;
