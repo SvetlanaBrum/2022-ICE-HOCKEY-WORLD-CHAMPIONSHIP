@@ -61,7 +61,7 @@ function letsGetStarted() {
     heading.classList.add("headingChanged");
 }
 
-const button = document.querySelector("#myButton");
+const button = document.querySelector(".myButton");
 
 button.addEventListener("click", function () {
     const audio = document.querySelector("#myAudio");
